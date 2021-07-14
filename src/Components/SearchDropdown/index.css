@@ -1,14 +1,103 @@
-.dd-wrapper { position: relative; border: 1px solid #eee; border-bottom: none; border-radius: 0.25rem; }
-.dd-wrapper:focus { outline: none; }
-.dd-wrapper .dd-header { display: flex; justify-content: space-between; cursor: pointer; width: 100%; padding: 0.5rem; border-bottom: 1px solid #eee; }
-.dd-wrapper .dd-header__title { width: 90%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.dd-wrapper .dd-header__action { color: rgba(33, 37, 41, 0.5); }
-.dd-wrapper .dd-header:focus { outline: none; }
-.dd-wrapper .dd-textbox-wrapper { font-weight: normal; }
-.dd-wrapper .dd-textbox-wrapper input { display: block; width: 100%; font-size: 1rem; font-weight: 300; padding: 4px 0.5rem; border: 1px solid #eee; border-width: 0 0 1px 0; }
-.dd-wrapper .dd-textbox-wrapper input::placeholder { color: #828a91; }
-.dd-wrapper .dd-textbox-wrapper input:focus { outline: none; }
-.dd-wrapper .dd-list { padding: 0; margin: 0; width: 100%; max-height: 286px; overflow-x: hidden; overflow-y: scroll; border: 1px solid #eee; border-width: 1px 0; }
-.dd-wrapper .dd-list li { list-style-type: none; padding: 0.25rem 0.5rem; width: 100%; text-align: left; }
-.dd-wrapper .dd-list li.active, .dd-wrapper .dd-list li:hover, .dd-wrapper .dd-list li:focus { cursor: pointer; background-color: #f5f7f9; outline: none; }
-.dd-wrapper .no_results { font-size: 14px; line-height: 24px; text-transform: uppercase; color: #9ba4ab; text-align: center; margin: 32px; }
+.dd-wrapper {
+  position: relative;
+  border: 1px solid #eee;
+  border-bottom: none;
+  border-radius: 0.25rem;
+}
+.dd-wrapper:focus {
+  outline: none;
+}
+.dd-wrapper .dd-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+.dd-wrapper .dd-header__title {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dd-wrapper .dd-header__action {
+  color: rgba(33, 37, 41, 0.5);
+}
+.dd-wrapper .dd-header:focus {
+  outline: none;
+}
+.dd-wrapper .dd-textbox-wrapper {
+  font-weight: normal;
+}
+.dd-wrapper .dd-textbox-wrapper input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 4px 0.5rem;
+  border: 1px solid #eee;
+  border-width: 0 0 1px 0;
+}
+.dd-wrapper .dd-textbox-wrapper input::placeholder {
+  color: #828a91;
+}
+.dd-wrapper .dd-textbox-wrapper input:focus {
+  outline: none;
+}
+.dd-wrapper .dd-list {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-height: 286px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 1px solid #eee;
+  border-width: 1px 0;
+}
+.dd-wrapper .dd-list li {
+  list-style-type: none;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.dd-wrapper .dd-list li.active,
+.dd-wrapper .dd-list li:hover,
+.dd-wrapper .dd-list li:focus {
+  cursor: pointer;
+  background-color: #f5f7f9;
+  outline: none;
+}
+.dd-wrapper .no_results {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #9ba4ab;
+  text-align: center;
+  margin: 32px;
+}
+
+.dd-options {
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.dd-options li {
+  cursor: pointer;
+}
+
+.dd-options-item {
+  list-style: none;
+  padding: 5px;
+}
+
+.dd-options-item:hover {
+  background-color: #fafafa;
+}
+
+.dd-options-item.active {
+  background-color: #fafafa;
+}

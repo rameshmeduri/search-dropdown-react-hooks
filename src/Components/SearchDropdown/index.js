@@ -6,8 +6,7 @@ const search = (searchTerm, options) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const rx = new RegExp(`${searchTerm}`, 'i');
-      const results = options.filter((str) => !!(str.match(rx)));
-      console.log('results --> ', results );
+      const results = options.filter((str) => !!str.match(rx));
       if (results && results.length) {
         resolve(results);
       } else {
@@ -65,7 +64,7 @@ function SearchDropdown({ placeholder, options, onSelectCallback }) {
     }
   }, [row, currState.highlighted]);
 
-  const onToggle = () => setOpen((v) => !v);
+  const onToggle = () => setOpen((prev) => !prev);
   const onChange = (e) => setSearchTerm(e.target.value);
   const onSelect = (e) => dropdownSelect(e.target.dataset.value);
   const onKeyDown = (e) => {
@@ -88,7 +87,7 @@ function SearchDropdown({ placeholder, options, onSelectCallback }) {
       currState.highlighted = newHighlighted;
       setRow(newHighlighted);
     }
-    if (results.length && key === 'Enter') {
+    if (results && results.length && key === 'Enter') {
       console.log(`if (results.length && key === 'Enter') {`, row);
       dropdownSelect(results[row]);
     }
@@ -116,8 +115,6 @@ function SearchDropdown({ placeholder, options, onSelectCallback }) {
         })}
       </ul>
     );
-  } else {
-    content = <div className="no_results">NO RESULTS FOUND</div>;
   }
 
   return (
