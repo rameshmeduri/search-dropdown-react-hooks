@@ -122,11 +122,11 @@ function SearchDropdown({ placeholder, options, onSelectCallback }) {
       <div className="dd-header" onClick={onToggle}>
         <div className="dd-header__title">{currState.value || placeholder}</div>
         <div className="dd-header__action">
-          {open ? (
-            <i className="fas fa-angle-up" />
-          ) : (
-            <i className="fas fa-angle-down" />
-          )}
+          {
+            open
+              ? (<i className="fas fa-angle-up" />)
+              : (<i className="fas fa-angle-down" />)
+          }
         </div>
       </div>
       {open && (
