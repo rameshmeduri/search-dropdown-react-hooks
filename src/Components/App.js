@@ -257,7 +257,8 @@ const App = () => (
           onSelectCallback={(v) => {
             console.log('onSelectCallback --> ', v);
           }}
-        />
+        />        
+        <h6 className="mt-2">Test</h6>
       </div>
       <div className="col-9"></div>
     </div>

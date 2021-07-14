@@ -119,29 +119,31 @@ function SearchDropdown({ placeholder, options, onSelectCallback }) {
 
   return (
     <div className="dd-wrapper" tabIndex={1} onKeyDown={onKeyDown}>
-      <div className="dd-header" onClick={onToggle}>
-        <div className="dd-header__title">{currState.value || placeholder}</div>
-        <div className="dd-header__action">
-          {open ? (
-            <i className="fas fa-angle-up" />
-          ) : (
-            <i className="fas fa-angle-down" />
-          )}
-        </div>
-      </div>
-      {open && (
-        <Fragment>
-          <div className="dd-textbox-wrapper">
-            <input
-              type="search"
-              placeholder="search"
-              value={searchTerm}
-              onChange={onChange}
-            />
+      <div className="dd-wrapper-absolute">
+        <div className="dd-header" onClick={onToggle}>
+          <div className="dd-header__title">{currState.value || placeholder}</div>
+          <div className="dd-header__action">
+            {open ? (
+              <i className="fas fa-angle-up" />
+            ) : (
+              <i className="fas fa-angle-down" />
+            )}
           </div>
-          <div className="dd-content-wrapper">{content}</div>
-        </Fragment>
-      )}
+        </div>
+        {open && (
+          <Fragment>
+            <div className="dd-textbox-wrapper">
+              <input
+                type="search"
+                placeholder="search"
+                value={searchTerm}
+                onChange={onChange}
+              />
+            </div>
+            <div className="dd-content-wrapper">{content}</div>
+          </Fragment>
+        )}
+      </div>
     </div>
   );
 }
