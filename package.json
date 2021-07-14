@@ -1,21 +1,30 @@
 {
   "name": "cra",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
-  },
+  "version": "1.0.0",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{jsx,js,css,scss,json}\""
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bootstrap": "^5.0.2",
+    "reactstrap": "^8.9.0",
+    "react-onclickoutside": "^6.11.2",
+    "classnames": "^2.3.1",
+    "prop-types": "15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2",
+    "react-scripts": "^4.0.3",
+    "web-vitals": "^1.0.1"
   },
   "eslintConfig": {
     "extends": [
